@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import '../MovieDetails/MovieDetails';
+import MovieDetails from '../MovieDetails/MovieDetails';
+import MovieItem from '../MovieItem/MovieItem';
 
 function MovieList() {
 
@@ -13,18 +15,13 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+
+
     return (
         <main>
             <h1>MovieList</h1>
             <section className="movies">
-                {movies.map(movie => {
-                    return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title} />
-                        </div>
-                    );
-                })}
+            {movies.map( movie=>( <MovieItem movie={movie}  />))}
             </section>
         </main>
 

@@ -16,6 +16,8 @@ function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
 }
 
+
+
 function* fetchAllMovies() {
     // get all movies from the DB
     try {
@@ -41,6 +43,14 @@ const movies = (state = [], action) => {
             return state;
     }
 }
+//used to store the movie_id for the MovieDetails page
+const movieId = ( state ={}, action ) =>{
+    console.log( 'inventory reducer:', action );
+    if( action.type === 'SET_ID' ){
+      return action.payload;
+    }
+    return state;
+  }
 
 // Used to store the movie genres
 const genres = (state = [], action) => {
@@ -57,6 +67,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        movieId
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
