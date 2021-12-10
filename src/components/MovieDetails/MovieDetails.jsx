@@ -6,6 +6,7 @@ function MovieDetails( props ){
     const dispatch = useDispatch();
     const movieId = useSelector(store => store.movieId);
     const movies = useSelector(store => store.movies);
+    const genres = useSelector(store => store.genres);
 
     const[ thisMovie, setThisMovie ]=useState( {} );
 
@@ -21,7 +22,10 @@ function MovieDetails( props ){
     return(
         <div>
             <h1>Movie Details: {thisMovie.title}</h1>
-            <p> { JSON.stringify( thisMovie.description ) } </p>
+            <p> { JSON.stringify( thisMovie.description )} </p>
+            <br />
+            <p>  Genres: </p>
+            {genres.map( (genre) => <p>{genre.name}</p>)}
         </div>
     )
 }

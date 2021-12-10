@@ -18,6 +18,10 @@ function MovieItem( props ){
                 type: 'SET_ID',
                 payload: props.movie.id
             })
+            dispatch({
+                type: 'FETCH_GENRES',
+                payload: props.movie.id
+            })
            //push the url that you want to go to /details/id
            history.push( `/details/` );
        }
