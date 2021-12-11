@@ -24,6 +24,7 @@ function* postMovie( action ) {
         const response = yield axios.post('/api/movie', action.payload);
         console.log( 'adding movie: ', response.data );
         yield put( { type: 'FETCH_MOVIES', payload: response.data } );
+        alert( 'movie saved!' );
     } catch( err ){
         alert( 'no' );
         console.log( err );

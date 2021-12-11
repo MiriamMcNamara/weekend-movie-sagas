@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 function AddMovie( props ){
 
     const dispatch = useDispatch();
+    const history = useHistory();
     // const[ name, setName ]=useState( null );
     const[ addMovie, setAddMovie ]=useState( {
         title: '',
@@ -19,6 +20,10 @@ function AddMovie( props ){
             type: 'POST_MOVIE',
             payload: addMovie
         });
+    }
+
+    const backToList = () => {
+        history.push('/' );
     }
 
     const handleTitle = (event )=>{ //input capture
@@ -70,7 +75,7 @@ function AddMovie( props ){
                 <option value="13">Superhero</option>
             </select>
             <br />
-            <button>Cancel</button>
+            <button onClick={backToList}>Cancel</button>
             <br />
             <button onClick={postMovie}>Save</button>
 {/* - a textarea (for the movie description)
