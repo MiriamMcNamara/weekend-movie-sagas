@@ -10,13 +10,13 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 PART ONE: /details page
 [x]- create MovieDetails component
-[]- add route to the movie image that links to MovieDetails when you click on the image** How and where do I mount the details page? 
-[] pass down props of invididual movie to /details and get it displayed on the DOM**
-[] check that store and sagas is set up in index
-[]- create a GET route call that uses the id of the movie that's clicked to pull that movie's info, including genres
-[]- use redux to store movie details
-[]- display movie details, including genres
-[]- back to list button that takes you back to movieList
+[x]- add route to the movie image that links to MovieDetails when you click on the image** How and where do I mount the details page? 
+[x] pass down props of invididual movie to /details and get it displayed on the DOM**
+[x] check that store and sagas is set up in index
+[x]- create a new store that captures the movie's ID when it's clicked on
+[x]- use redux to stores and a loop in MovieDetails to find the right description
+[x]- display movie details, including genres
+[x]- back to list button that takes you back to movieList
 
 PART TWO: /addmovie page (perhaps linked from main page? unclear from directions)
 []- create AddMovie component with all of the fields listed in the instructions, cancel button that redirects to homepage, and save button that triggers the POST call (which is already written, base your stuff on it)

@@ -28,7 +28,7 @@ function MovieItem( props ){
 
     return(
         <div>
-            <h1>MovieItem</h1>
+            
                 <div key={props.movie.id} >
                     <h3>{props.movie.title}</h3>
                     <img src={props.movie.poster} alt={props.movie.title} onClick={goToDetails} />
