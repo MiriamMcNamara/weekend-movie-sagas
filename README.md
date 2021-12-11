@@ -16,8 +16,8 @@
 
 For this weekend challenge I expanded on an assigned movie management application. The user was already able to see movies that exist in the DB. I added a detailed view for each individual movie when the movie poster is clicked on, including genres associated with that movie. I also added a feature that allows the user to add a movie to the database. I did not put any time into styling this application, choosing to focus on other assignments instead, but I hope to return to this one and add styling in the future.
 
-<img src="" />## Built With
-
+## Built With
+<img src="" />
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a><a href="https://nodejs.org/en/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" height="40px" width="40px" /></a><a href="https://www.postgresql.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" height="40px" width="40px" /></a><a href="https://reactjs.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" height="40px" width="40px" /></a><a href="https://redux.js.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" height="40px" width="40px" /></a>
 
 ### Prerequisites
